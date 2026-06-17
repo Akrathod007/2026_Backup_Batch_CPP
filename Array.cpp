@@ -24,10 +24,26 @@ int main(){
     // cout <<endl<< sizeof(char);
     // cout <<endl<< sizeof(double);
 
-    int nums[] = {1,2,3},i,size;
-    size = sizeof(nums)/sizeof(int);
-      for(i=0;i<size;i++){
-        cout << nums[i]<<endl;
+    // int nums[] = {1,2,3},i,size;
+    // size = sizeof(nums)/sizeof(int);
+    //   for(i=0;i<size;i++){
+    //     cout << nums[i]<<endl;
+    // }
+
+    int nums[3][3],i,j;
+
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            cout << "Enter a nums["<<i<<"]["<<j<<"] : ";
+            cin >> nums[i][j];
+        }
+    }
+
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            cout << nums[i][j] << " ";
+        }
+        cout << "\n";
     }
     return 0;
 }
