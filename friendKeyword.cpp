@@ -11,11 +11,15 @@ class Demo{
             cout << "\nEnter a number : ";
             cin >> no;
         }
-        friend void display(Demo d);
+        int getNo(){
+            return no;
+        }
+        friend void display(Demo &d);
         friend void compare(Demo d1,Demo d2);
 };
 
-void display(Demo d){
+void display(Demo &d){
+    d.no = 1000;
     cout << "No : "<<d.no;
 }
 
@@ -33,7 +37,7 @@ int main(){
     // cout << d1.no;
     d1.scan();
     display(d1);
-
+    cout << "\n" << d1.getNo();
     d2.scan();
     display(d2);
 
