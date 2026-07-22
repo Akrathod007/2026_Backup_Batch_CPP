@@ -1,18 +1,56 @@
 #include <iostream>
 using namespace std;
 
-void demo()
+// void demo()
+// {
+//     static int x = 0;
+
+//     x++;
+
+//     cout << x << endl;
+// }
+
+// int main()
+// {
+//     demo();
+//     demo();
+//     demo();
+// }
+
+// class Student
+// {
+// public:
+//     static int count;
+// };
+
+// int Student::count = 0;
+
+// int main()
+// {
+//     Student s1;
+//     Student s2;
+//     Student s3;
+
+//     s1.count++;
+//     s2.count++;
+//     s3.count++;
+
+//     cout << Student::count;
+// }
+
+
+class Student
 {
-    static int x = 0;
-
-    x++;
-
-    cout << x << endl;
-}
+public:
+    int id;
+    static void message()
+    {
+        // id = 21;
+        cout << "Welcome";
+    }
+};
 
 int main()
 {
-    demo();
-    demo();
-    demo();
+    Student::message();
 }
